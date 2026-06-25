@@ -1,8 +1,35 @@
-@use './components/Header/header';
-@use './components/Info/info';
-@use './content/UIShell/UIShell';
-@use './content/LandingPage/landing-page';
+// Carbon's Header is 48px tall; push all page content below it.
+.app__main {
+  padding-top: 3rem;
+  min-height: calc(100vh - 3rem);
+}
 
-.app .cds--content {
-  margin-top: 3rem;
+.app__page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.app__page-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  color: #161616;
+}
+
+.app__selector {
+  max-width: 320px;
+  margin-bottom: 1.5rem;
+}
+
+.app__formation-controls {
+  margin-bottom: 1.5rem;
+}
+
+// Centre the formation board horizontally on its page
+.app__page--formation .app__formation-wrap {
+  display: flex;
+  justify-content: center;
+  // perspective wrapper keeps the 3-D tilt from collapsing surrounding layout
+  perspective: 900px;
 }
